@@ -27,21 +27,20 @@ send.addEventListener("click", function () {
   //ticket calc if
   if (yourAge.value === "minorenne") {
     price = ticket - (ticket / 100) * 20;
+    //discount
+    disocuntBox.classList.remove("hidden");
+    disocuntBox.classList.add("show");
+    let discount = (ticket / 100) * 20;
+    yourDiscount.innerText = discount.toFixed(2);
   }
   if (yourAge.value === "over65") {
     price = ticket - (ticket / 100) * 40;
+    //discount
+    disocuntBox.classList.remove("hidden");
+    disocuntBox.classList.add("show");
+    let discount = (ticket / 100) * 40;
+    yourDiscount.innerText = discount.toFixed(2);
   }
   yourTicketPlaceholder.innerText = price.toFixed(2);
   realPricePlaceholder.innerText = ticket.toFixed(2);
-  //discount?
-  if (yourAge.value === "minorenne") {
-    disocuntBox.classList.remove("hidden");
-    disocuntBox.classList.add("show");
-    yourDiscount.innerText = (ticket / 100) * 20;
-  }
-  if (yourAge.value === "over65") {
-    disocuntBox.classList.remove("hidden");
-    disocuntBox.classList.add("show");
-    yourDiscount.innerText = (ticket / 100) * 40;
-  }
 });
