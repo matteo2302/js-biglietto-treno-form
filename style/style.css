@@ -12,7 +12,7 @@
   align-items: center;
 }
 #trenitalia {
-  margin-top: 300px;
+  margin-top: 100px;
   border: 2px solid lightgray;
   border-radius: 20px;
   background-color: rgb(207, 0, 40);
@@ -33,4 +33,12 @@ h4 {
 }
 .show {
   display: block;
+}
+.datas {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  margin: 50px 0;
+  border: 2px solid rgb(207, 0, 40);
 }
