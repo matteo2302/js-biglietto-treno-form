@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
 }
-.trenitalia {
+#trenitalia {
   margin-top: 300px;
   border: 2px solid lightgray;
   border-radius: 20px;
