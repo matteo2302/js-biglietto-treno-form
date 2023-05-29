@@ -11,6 +11,8 @@ const yourKms = document.getElementById("kms");
 const tren = document.getElementById("trenitalia");
 const yourAge = document.getElementById("age");
 const greetings = document.getElementById("greetings");
+const yourDiscount = document.getElementById("discount");
+const disocuntBox = document.getElementById("disocunt-box");
 //button listener
 send.addEventListener("click", function () {
   //ticket calc
@@ -31,4 +33,15 @@ send.addEventListener("click", function () {
   }
   yourTicketPlaceholder.innerText = price.toFixed(2);
   realPricePlaceholder.innerText = ticket.toFixed(2);
+  //discount?
+  if (yourAge.value === "minorenne") {
+    disocuntBox.classList.remove("hidden");
+    disocuntBox.classList.add("show");
+    yourDiscount.innerText = (ticket / 100) * 20;
+  }
+  if (yourAge.value === "over65") {
+    disocuntBox.classList.remove("hidden");
+    disocuntBox.classList.add("show");
+    yourDiscount.innerText = (ticket / 100) * 40;
+  }
 });
