@@ -16,18 +16,28 @@
   <body>
     <div class="container">
       <div class="datas">
-        <input
-          type="number"
-          name="number"
-          id="kms"
-          label="quanti km hai intenzione di percorrere?"
-        />
-        <input type="text" name="your-name" id="your-name" />
-        <select name="age" id="age">
-          <option value="maggiorenne">maggiorenne</option>
-          <option value="minorenne">minorenne</option>
-          <option value="over65">over 65 +</option>
-        </select>
+        <div class="d-flex flex-column">
+          <label for="kms"> quanti kilometri intendi percorrere?</label>
+          <input type="number" name="number" id="kms" placeholder="Es : 600" />
+        </div>
+        <div class="d-flex flex-column">
+          <label for="name"> come ti chiami?</label
+          ><input
+            type="text"
+            name="your-name"
+            id="your-name"
+            placeholder="Es : Matteo"
+          />
+        </div>
+        <div class="d-flex flex-column">
+          <label for="age">a che fascia di età appartieni?</label>
+          <select name="age" id="age">
+            <option value="maggiorenne">maggiorenne</option>
+            <option value="minorenne">minorenne</option>
+            <option value="over65">over 65 +</option>
+          </select>
+        </div>
+
         <button id="send">ecco il tuo biglietto-</button>
       </div>
       <div id="trenitalia" class="hidden">
